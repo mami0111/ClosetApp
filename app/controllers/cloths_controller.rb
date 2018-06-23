@@ -69,6 +69,6 @@ class ClothsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cloth_params
-      params.require(:cloth).permit(:user, :name, :category, :color, :memo, :image_cloth)
+      params.require(:cloth).permit(:user, :name, :category, :color, :memo, :image)
     end
 end

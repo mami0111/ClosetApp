@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2018_06_23_015027) do
     t.integer "category_id"
     t.integer "color_id"
     t.string "memo"
-    t.string "image_cloth"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_cloths_on_category_id"
