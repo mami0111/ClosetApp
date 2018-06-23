@@ -1,0 +1,47 @@
+<%= form_with(model: cloth, local: true) do |form| %>
+  <% if cloth.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cloth.errors.count, "error") %> prohibited this cloth from being saved:</h2>
+
+      <ul>
+      <% cloth.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user %>
+    <%= form.text_field :user %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :memo %>
+    <%= form.text_field :memo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_cloth %>
+    <%= form.text_field :image_cloth %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
