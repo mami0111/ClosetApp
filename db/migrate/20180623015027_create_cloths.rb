@@ -6,7 +6,7 @@ class CreateCloths < ActiveRecord::Migration[5.2]
       t.references :category
       t.references :color
       t.string :memo
-      t.string :image_cloth
+      t.string :image
 
       t.timestamps
     end
