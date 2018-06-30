@@ -25,6 +25,9 @@
     <%= form.label :category %>
     <%= form.text_field :category %>
   </div>
+  <% Category.all.each do |attr|%>
+    <%= attr.name %>
+  <% end %>
 
   <div class="field">
     <%= form.label :color %>
