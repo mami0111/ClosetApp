@@ -26,13 +26,9 @@
     <%= form.collection_select :category_id, Category.all, :id, :name %>
   </div>
 
-  <% Category.all.each do |attr|%>
-    <%= attr.name %>
-  <% end %>
-
   <div class="field">
     <%= form.label :color %>
-    <%= form.text_field :color %>
+    <%= form.collection_select :color_id, Color.all, :id, :name %>
   </div>
 
   <div class="field">
