@@ -10,7 +10,7 @@
       <th>Category</th>
       <th>Color</th>
       <th>Memo</th>
-      <th>Image cloth</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,12 +18,12 @@
   <tbody>
     <% @cloths.each do |cloth| %>
       <tr>
-        <td><%= cloth.user %></td>
+        <td><%= cloth.user_id %></td>
         <td><%= cloth.name %></td>
-        <td><%= cloth.category %></td>
-        <td><%= cloth.color %></td>
+        <td><%= cloth.category_id %></td>
+        <td><%= cloth.color_id %></td>
         <td><%= cloth.memo %></td>
-        <td><%= cloth.image_cloth %></td>
+        <td><%= cloth.image %></td>
         <td><%= link_to 'Show', cloth %></td>
         <td><%= link_to 'Edit', edit_cloth_path(cloth) %></td>
         <td><%= link_to 'Destroy', cloth, method: :delete, data: { confirm: 'Are you sure?' } %></td>

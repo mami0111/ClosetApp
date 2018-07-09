@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @cloth.user %>
+  <%= @cloth.user_id %>
 </p>
 
 <p>
@@ -12,12 +12,12 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @cloth.category %>
+  <%= @cloth.category_id %>
 </p>
 
 <p>
   <strong>Color:</strong>
-  <%= @cloth.color %>
+  <%= @cloth.color_id %>
 </p>
 
 <p>
@@ -26,8 +26,8 @@
 </p>
 
 <p>
-  <strong>Image cloth:</strong>
-  <%= @cloth.image_cloth %>
+  <strong>Image:</strong>
+  <%= @cloth.image %>
 </p>
 
 <%= link_to 'Edit', edit_cloth_path(@cloth) %> |
