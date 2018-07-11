@@ -68,9 +68,8 @@ class ClothsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    # 削除しても問題はないらしい。ただし、URLから直接入力すればデータが登録できてしまう
+    # Strong Parameters。URLから直接入力すればデータが登録できてしまうので、それを阻止するもの。
     def cloth_params
       params.require(:cloth).permit(:user_id, :name, :category_id, :color_id, :memo, :image)
-      # params[:user].permit(:user, :name, :category, :color, :memo, :image)
     end
 end
