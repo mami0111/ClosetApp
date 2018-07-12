@@ -1,5 +1,5 @@
 class ClothsController < ApplicationController
-  before_action :set_cloth, only: [:show, :edit, :update, :destroy]
+  before_action :set_cloth, only: [:show, :edit, :update, :destroy, :seach]
 
   # GET /cloths
   # GET /cloths.json
@@ -71,5 +71,10 @@ class ClothsController < ApplicationController
     # Strong Parameters。URLから直接入力すればデータが登録できてしまうので、それを阻止するもの。
     def cloth_params
       params.require(:cloth).permit(:user_id, :name, :category_id, :color_id, :memo, :image)
+    end
+    
+    # 検索機能を実装
+    def search
+      @cloths=Cloth.where(category_id: params[:id])
     end
 end
