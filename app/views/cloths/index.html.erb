@@ -27,11 +27,16 @@
         <td><%= link_to 'Show', cloth %></td>
         <td><%= link_to 'Edit', edit_cloth_path(cloth) %></td>
         <td><%= link_to 'Destroy', cloth, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      </tr> 
     <% end %>
   </tbody>
 </table>
 
 <br>
+<% @categories.each do |category| %>
+  <%= link_to category.name, "/cloths/category/#{category.id}" %>
+<% end %>
 
+
+<%= link_to 'Category1', "/cloths/category/1" %>
 <%= link_to 'New Cloth', new_cloth_path %>

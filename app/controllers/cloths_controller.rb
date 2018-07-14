@@ -1,10 +1,11 @@
 class ClothsController < ApplicationController
-  before_action :set_cloth, only: [:show, :edit, :update, :destroy, :seach]
+  before_action :set_cloth, only: [:show, :edit, :update, :destroy]
 
   # GET /cloths
   # GET /cloths.json
   def index
     @cloths = Cloth.all
+    @categories = Category.all
   end
 
   # GET /cloths/1
@@ -60,6 +61,10 @@ class ClothsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # 検索機能を実装
+  def search
+    @cloths=Cloth.where(category_id: params[:id])
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -73,8 +78,5 @@ class ClothsController < ApplicationController
       params.require(:cloth).permit(:user_id, :name, :category_id, :color_id, :memo, :image)
     end
     
-    # 検索機能を実装
-    def search
-      @cloths=Cloth.where(category_id: params[:id])
-    end
+
 end
