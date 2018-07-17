@@ -1,3 +1,38 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main{
+  width: 600px;
+  margin: 0 auto;
+}
+
+.main-logo{
+  text-align: center;
+}
+
+.main-image{
+ text-align: center;
+  img{
+  width: 400px; 
+  }
+}
+
+.main-discription{
+  text-align: center;
+}
+
+.sign-up{
+  width: 600px;
+  margin: 0 auto;
+
+  h2{
+    text-align: center;
+  }
+
+  field{
+    text-align: center;
+  }
+
+
+}
