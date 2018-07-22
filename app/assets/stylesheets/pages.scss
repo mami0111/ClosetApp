@@ -23,16 +23,26 @@
 }
 
 .sign-up{
-  width: 600px;
+  width: 400px;
   margin: 0 auto;
 
   h2{
     text-align: center;
   }
 
-  field{
+}
+
+.sign-in{
+  width: 400px;
+  margin: 0 auto;
+
+  h2{
     text-align: center;
   }
 
-
+  actions{
+    width: 100px;
+    margin:0 auto;
+  }
+  
 }

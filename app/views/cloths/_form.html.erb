@@ -1,47 +1,52 @@
-<%= form_with(model: cloth, local: true) do |form| %>
-  <% if cloth.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(cloth.errors.count, "error") %> prohibited this cloth from being saved:</h2>
+<div class="cloth-new">
 
-      <ul>
-      <% cloth.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <%= form_with(model: cloth, local: true) do |form| %>
+    <% if cloth.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(cloth.errors.count, "error") %> prohibited this cloth from being saved:</h2>
+
+        <ul>
+        <% cloth.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.hidden_field :user_id, :value => current_user.id %> 
+    </div>
+     
+
+    <div class="field">
+      <%= form.label :洋服名 %><br>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :カテゴリ %><br>
+      <%= form.collection_select :category_id, Category.all, :id, :name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :カラー %><br>
+      <%= form.collection_select :color_id, Color.all, :id, :name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :メモ %><br>
+      <%= form.text_field :memo %>
+    </div>
+
+    <div class="field">
+        <%=form.label :image,"洋服画像" %><br>
+        <%= form.file_field :image %>
+
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.hidden_field :user_id, :value => current_user.id %> 
-  </div>
-   
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.collection_select :category_id, Category.all, :id, :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :color %>
-    <%= form.collection_select :color_id, Color.all, :id, :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :memo %>
-    <%= form.text_field :memo %>
-  </div>
-
-  <div class="field">
-      <%=form.label :image,"ユーザー画像" %>
-      <%= form.file_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

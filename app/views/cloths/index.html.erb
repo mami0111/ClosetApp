@@ -1,42 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Cloths</h1>
+<div class="cloth-index">
+  <h2><%= current_user.name %>のクローゼット</h2>
+  <h3>アイテム数：</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Name</th>
-      <th>Category</th>
-      <th>Color</th>
-      <th>Memo</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @cloths.each do |cloth| %>
-      <tr>
-        <td><%= cloth.user_id %></td>
-        <td><%= cloth.name %></td>
-        <td><%= cloth.category_id %></td>
-        <td><%= cloth.color_id %></td>
-        <td><%= cloth.memo %></td>
-        <td><%= cloth.image %></td>
-        <td><%= link_to 'Show', cloth %></td>
-        <td><%= link_to 'Edit', edit_cloth_path(cloth) %></td>
-        <td><%= link_to 'Destroy', cloth, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr> 
+      <li>
+        <img src="<%= cloth.image %>">
+      <br>
+      <%= link_to "#{cloth.name}", "cloths/#{cloth.id}" %>
+      </li>
     <% end %>
-  </tbody>
-</table>
+</div>
 
-<br>
-<% @categories.each do |category| %>
-  <%= link_to category.name, "/cloths/category/#{category.id}" %>
-<% end %>
-
+<%= render 'side_nav' %>
 
 <%= link_to 'Category1', "/cloths/category/1" %>
 <%= link_to 'New Cloth', new_cloth_path %>

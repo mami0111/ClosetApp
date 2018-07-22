@@ -1,3 +1,7 @@
+<head>
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+
 <div class="sign-up">
 
   <h2>新規登録</h2>
@@ -7,16 +11,19 @@
 
     <%# nameフォームを追加 %>
     <div class="field">
+      <i class="fas fa-user fa-fw"></i>
       <%= f.label :"ユーザーネーム" %><br />
       <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
     </div>
 
     <div class="field">
+      <i class="fas fa-envelope fa-fw"></i>
       <%= f.label :"メールアドレス" %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %><link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     </div>
 
     <div class="field">
+      <i class="fas fa-lock fa-fw"></i>
       <%= f.label :"パスワード" %>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -25,6 +32,7 @@
     </div>
 
     <div class="field">
+      <i class="fas fa-lock fa-fw"></i>
       <%= f.label :"パスワード（再確認）" %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>

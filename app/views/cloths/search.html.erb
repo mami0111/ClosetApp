@@ -1,8 +1,15 @@
-<% @cloths.each do |cloth| %>
+<div class="cloth-search">
 
-  <%= cloth.name %>
 
-  <img src="<%= cloth.image %> ">
+  <% @cloths.each do |cloth| %>
 
-  <br>
-<% end %>
+    <%= cloth.name %>
+
+    <img src="<%= cloth.image %> ">
+
+    <br>
+  <% end %>
+
+</div>
+
+<%= render 'side_nav' %>

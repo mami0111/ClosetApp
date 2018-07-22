@@ -1,0 +1,13 @@
+<div class="side-nav">
+
+<h3>カテゴリ</h3>
+<% @categories=Category.all %>
+<% @categories.each do |category| %>
+  <p>
+    <%= link_to "#{category.name}", "/cloths/category/#{category.id}" %>
+  </p>
+ <% end %>
+
+ <p>テスト：_side_nav.html.erb</p>
+
+</div>

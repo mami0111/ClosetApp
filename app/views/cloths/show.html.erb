@@ -1,34 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @cloth.user_id %>
-</p>
+<div class="cloth-show">
 
-<p>
-  <strong>Name:</strong>
-  <%= @cloth.name %>
-</p>
+  <h3><%= @cloth.name %></h3>
+  <div class="cloth-image">
+    <img src ="<%= @cloth.image %>">
+  </div>
+  <p>カテゴリ：</p>
+  <p>カラー：</p>
+  <p>メモ：#{@cloth.memo}</p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @cloth.category_id %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @cloth.color_id %>
-</p>
-
-<p>
-  <strong>Memo:</strong>
-  <%= @cloth.memo %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @cloth.image %>
-</p>
+</div>
 
 <%= link_to 'Edit', edit_cloth_path(@cloth) %> |
 <%= link_to 'Back', cloths_path %>
