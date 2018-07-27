@@ -6,9 +6,9 @@
   <div class="cloth-image">
     <img src ="<%= @cloth.image %>">
   </div>
-  <p>カテゴリ：</p>
-  <p>カラー：</p>
-  <p>メモ：#{@cloth.memo}</p>
+  <p>カテゴリ：<%= @cloth.category.name %></p>
+  <p>カラー：<%= @cloth.color.name %></p>
+  <p>メモ：<%= @cloth.memo %></p>
 
 </div>
 

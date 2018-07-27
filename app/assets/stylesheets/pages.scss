@@ -20,31 +20,35 @@
 
 .main-discription{
   text-align: center;
+  font-size: 15px;
 }
 
-.sign-up{
+//新規登録、ログインページ
+.uesr-date{
   width: 400px;
   margin: 0 auto;
-
-  h2{
-    text-align: center;
-  }
-
 }
 
-.sign-in{
-  width: 400px;
-  margin: 0 auto;
+.user-date h2{
+  text-align: center;
+}
 
-  h2{
-    text-align: center;
-  }
+i{
+  float:left;
+}
 
-  actions{
-    width: 100px;
-    margin:0 auto;
-  }
-  
+// ユーザ設定ページ下部
+.user-date h3{
+  text-align: center;
+}
+
+.user-date p{
+  text-align: center;
+}
+
+.delete_button{
+  width: 200px;
+  height: 25px;
 }
 
 //パスワードをお忘れの方ページ

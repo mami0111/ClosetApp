@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  belongs_to :cloth
+  has_one :cloth
 end

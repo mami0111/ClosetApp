@@ -1,11 +1,6 @@
 <h1>Editing Cloth</h1>
 
 <%= render 'form', cloth: @cloth %>
-<%= form_for @user,:url => {:action => 'update'}, :html => {:multipart => true} do |f| %>
 
-  <%= f.file_field :image %><br>
-  <%= f.submit %>
-
-<% end %>
 <%= link_to 'Show', @cloth %> |
 <%= link_to 'Back', cloths_path %>
