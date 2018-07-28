@@ -1,5 +1,4 @@
 class ClothsController < ApplicationController
-  before_action :sign_in_required, only: [:index] 
   before_action :set_cloth, only: [:show, :edit, :update, :destroy]
 
   # GET /cloths
