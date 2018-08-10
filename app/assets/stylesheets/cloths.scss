@@ -9,7 +9,27 @@ li{
 // ログイン後のトップページ
 .cloth-index{
   float: right;
-  width: 80%;
+  width: 70%;
+}
+
+//side_nav
+.side-nav{
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 15px;
+  width: 20%;
+}
+
+.side-nav p{
+  border-bottom: solid 1px #dadada;
+}
+
+.side-nav p:hover{
+  background-color: #dadada;
+}
+
+.side-nav a{
+  color: #646464;
 }
 
 // 洋服詳細ページ
@@ -27,6 +47,35 @@ li{
 }
 
 // 洋服データ登録ページ
+.cloth-new-wrapper{
+  text-align: center;
+  color: #646464;
+  padding-top: 50px;
+}
+
+.cloth-new{
+  width: 490px;
+  height: 650px;
+  margin: 0 auto;
+  border: solid 1px #a6a6a6;
+}
+
+.cloth-new h2{
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.cloth-date{
+  padding-top: 30px;
+}
+
+
+i{
+  float: left;
+}
+
+
 form{
   width: 250px;
   margin: 0 auto;
@@ -42,14 +91,25 @@ input {
     border-style: solid;
     border-width: 1px;
     border-color: rgb(166,166,166);
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 input[type="submit"]{
-  width:100px;
-  height: 25px;
-  
+  width: 130px;
+  height: 30px;
+  margin: 50px 0 50px 0; 
+  color: white;
+  background-color: #66ccff;
+  opacity: 0.8;
+  border-radius: 4px;
+  border-color: #66ccff;
 }
+
+input[type="submit"]:hover{
+  opacity: 1.0;
+  cursor: pointer;
+}
+
 
 select{
     width: 100%;
@@ -83,9 +143,5 @@ label{
   width: 80%;
 }
 
-// サイドバー
-.side-nav{
-  width: 20%;
-  float: left;
 
-}
+

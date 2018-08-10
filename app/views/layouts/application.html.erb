@@ -36,8 +36,8 @@
                 <div class="header-list">
                 <ul>
                 <% if user_signed_in? %>
-                    <li><%= link_to "洋服データ登録",
-                        "/cloths/new" %>
+                    <li><%= link_to "洋服一覧", "/cloths" %>
+                    <li><%= link_to "洋服データ登録","/cloths/new" %>
                     <li><%= link_to 'ユーザ設定', edit_user_registration_path %>
                     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
                 <% else %>
