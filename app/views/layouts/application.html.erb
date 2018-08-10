@@ -6,10 +6,25 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%# jQUeryライブラリの読み込み %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <script>
+    $(function() {
+        // jQuery Upload Thumbs 
+        $('form input:file').uploadThumbs({
+            position : 0,      // 0:before, 1:after, 2:parent.prepend, 3:parent.append,
+                               // any: arbitrarily jquery selector
+            imgbreak : true    // append <br> after thumbnail images
+        });
+    });
+    </script>
+
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    
+
   </head>
 
   <body>
@@ -21,8 +36,8 @@
                 <div class="header-list">
                 <ul>
                 <% if user_signed_in? %>
-                    <li><%= link_to "洋服データ登録",
-                        "/cloths/new" %>
+                    <li><%= link_to "洋服一覧", "/cloths" %>
+                    <li><%= link_to "洋服データ登録","/cloths/new" %>
                     <li><%= link_to 'ユーザ設定', edit_user_registration_path %>
                     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
                 <% else %>
@@ -38,5 +53,6 @@
         <p class="alert"><%= alert %></p>
 
         <%= yield %>
+
     </body>
 </html>

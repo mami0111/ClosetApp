@@ -14,8 +14,24 @@
  *= require_self
  */
 
+
+*{
+  box-sizing: border-box;
+}
+
 body{
   margin: 0;
+  font-family: sans-serif;
+  color: #646464;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 header{
@@ -60,4 +76,34 @@ li{
 .header-list a{
   color: white;
   text-decoration: none;
+}
+
+/* devise/shared/linksのCSS*/
+.new-password-path{
+  font-size: 15px;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.new-password-path a{
+  color: #66ccff;
+}
+
+
+.new-password-path:hover{
+  opacity: 1.0;
+}
+
+.login-link{
+  font-size: 15px;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.login-link a{
+  color: #66ccff;
+}
+
+.login-link:hover{
+  opacity: 1.0;
 }

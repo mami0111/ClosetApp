@@ -1,41 +1,47 @@
-<div class="user-date">
+<div class="login-wrapper">
+  <div class="container">
+    <div class="login">
 
-  <h2>新規登録</h2>
+      <h2>新規登録</h2>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+      <div class="login-user">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
 
-    <%# nameフォームを追加 %>
-    <div class="field">
-      <i class="fas fa-user fa-fw"></i>
-      <%= f.label :ユーザーネーム %><br />
-      <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+          <%# nameフォームを追加 %>
+          <div class="field">
+            <i class="fas fa-user fa-fw"></i>
+            <%= f.label :ユーザーネーム %><br />
+            <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+          </div>
+
+          <div class="field">
+            <i class="fas fa-envelope fa-fw"></i>
+            <%= f.label :メールアドレス %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %><link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+          </div>
+
+          <div class="field">
+            <i class="fas fa-lock fa-fw"></i>
+            <%= f.label :パスワード %>
+            <% if @minimum_password_length %>
+            (<%= @minimum_password_length %> 文字以上)
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+
+          <div class="field">
+            <i class="fas fa-lock fa-fw"></i>
+            <%= f.label :確認用パスワード %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "新規登録", :class => "submit-btn signup" %>
+          </div>
+        <% end %>
+
+      </div>
     </div>
-
-    <div class="field">
-      <i class="fas fa-envelope fa-fw"></i>
-      <%= f.label :メールアドレス %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %><link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    </div>
-
-    <div class="field">
-      <i class="fas fa-lock fa-fw"></i>
-      <%= f.label :パスワード %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <i class="fas fa-lock fa-fw"></i>
-      <%= f.label :確認用パスワード %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "新規登録" %>
-    </div>
-  <% end %>
-
+  </div>
 </div>

@@ -1,19 +1,19 @@
-<p id="notice"><%= notice %></p>
-
 <div class="cloth-index">
-  <h2><%= current_user.name %>のクローゼット</h2>
-  <h3>アイテム数：</h3>
 
-    <% @cloths.each do |cloth| %>
-      <li>
-        <img src="<%= cloth.image %>">
-      <br>
-      <%= link_to "#{cloth.name}", "cloths/#{cloth.id}" %>
-      </li>
-    <% end %>
+    <h2><%= current_user.name %>のクローゼット</h2>
+    <h3>アイテム数：<%= @cloths.count %></h3>
+
+      <% @cloths.each do |cloth| %>
+        <li>
+          <img src="<%= cloth.image %>">
+        <br>
+        <%= link_to "#{cloth.name}", "cloths/#{cloth.id}" %>
+        </li>
+      <% end %>
 </div>
 
 <%= render 'side_nav' %>
 
-<%= link_to 'Category1', "/cloths/category/1" %>
-<%= link_to 'New Cloth', new_cloth_path %>
+
+
+

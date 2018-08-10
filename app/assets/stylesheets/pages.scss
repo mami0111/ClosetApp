@@ -2,40 +2,88 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.main{
-  width: 600px;
+//TOPページ
+.top-wrapper{
+  text-align: center;
+  padding-top: 10px
+}
+
+.top-wrapper h1{
+}
+
+.top-wrapper img{
+  width: 500px;
+}
+
+.top-wrapper p{
+}
+
+.btn{
+  padding: 8px 24px;
+  color: white;
+  background-color: #66ccff;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.btn:hover{
+  opacity: 1;
+}
+
+
+//ログインページ、新規登録ページ
+.login-wrapper{
+  text-align: center;
+  color: #646464;
+  padding-top: 50px;
+}
+
+.login{
+  width: 490px;
+  height: 550px;
   margin: 0 auto;
+  border: solid 1px #a6a6a6;
 }
 
-.main-logo{
-  text-align: center;
+.login h2{
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 5px 0;
 }
 
-.main-image{
- text-align: center;
-  img{
-  width: 400px; 
-  }
+.login-user{
+  padding-top: 30px;
 }
 
-.main-discription{
-  text-align: center;
+.login-user form{
+  width: 300px;
+}
+
+.field-check{
+  float: left;
+  width: 30px;
+  display: inline;
+}
+
+.signup-link{
   font-size: 15px;
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
-//新規登録、ログインページ
-.uesr-date{
-  width: 400px;
-  margin: 0 auto;
+.signup-link a{
+  color: #66ccff;
 }
 
-.user-date h2{
-  text-align: center;
+.signup-link:hover{
+  opacity: 1.0;
 }
 
-i{
-  float:left;
+//新規登録ページのみ
+.signup input[type="submit"]{
+  margin-top: 10px;
 }
+
 
 // ユーザ設定ページ下部
 .user-date h3{
@@ -52,8 +100,30 @@ i{
 }
 
 //パスワードをお忘れの方ページ
-.password-new{
-  width: 600px;
-  margin: 0 auto;
+.password-new-wrapper{
+  text-align: center;
+  padding-top: 50px;
 }
+
+.password-new{
+  width: 700px;
+  height: 400px;
+  margin: 0 auto;
+  border: solid 1px #a6a6a6;
+}
+
+.password-new h2{
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.password-new p{
+  font-size: 15px;
+}
+
+.password-new.field{
+  margin-top: 20px;
+}
+
 
