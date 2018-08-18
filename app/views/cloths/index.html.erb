@@ -1,9 +1,10 @@
 <div class="cloth-index">
 
     <h2><%= current_user.name %>のクローゼット</h2>
+    <% @cloths = Cloth.where(user_id: current_user.id) %>
     <h3>アイテム数：<%= @cloths.count %></h3>
 
-      <% @cloths.each do |cloth| %>
+    <% @cloths.each do |cloth| %>
         <li>
           <img src="<%= cloth.image %>">
         <br>

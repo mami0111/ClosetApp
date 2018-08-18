@@ -84,21 +84,6 @@
   margin-top: 10px;
 }
 
-
-// ユーザ設定ページ下部
-.user-date h3{
-  text-align: center;
-}
-
-.user-date p{
-  text-align: center;
-}
-
-.delete_button{
-  width: 200px;
-  height: 25px;
-}
-
 //パスワードをお忘れの方ページ
 .password-new-wrapper{
   text-align: center;
@@ -127,3 +112,45 @@
 }
 
 
+i {
+  margin-top:5px;
+}
+
+
+// ユーザ設定ページ
+.delete-wrapper {
+  padding-top: 50px;
+  text-align: center;
+  color: #646464;
+}
+
+.delete {
+  width: 490px;
+  height: 250px;
+  margin: 50px auto;
+  border: solid 1px #a6a6a6;
+}
+
+.delete h2 {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.delete p {
+  padding: 20px 10px 5px 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.delete input[type="submit"] {
+  width: 200px;
+  height: 30px;
+  margin: 50px 0 50px 0; 
+  color: white;
+  background-color: #66ccff;
+  opacity: 0.8;
+  border-radius: 4px;
+  border-color: #66ccff;
+}
