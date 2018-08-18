@@ -13,7 +13,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <%# サムネイル表示の機能 %>
-    <script>
+    <%# <script>
     $(function() {
         // jQuery Upload Thumbs 
         $('form input:file').uploadThumbs({
@@ -22,7 +22,7 @@
             imgbreak : true    // append <br> after thumbnail images
         });
     });
-    </script>
+    </script> %>
 
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
@@ -49,11 +49,23 @@
                 </div>
             </nav>
         </header>
+       
+        <div class="error-message">
+            <div class="container">
+                <p class="notice"><%= notice %></p>
+                <p class="alert"><%= alert %></p>
+            </div>
+        </div>
 
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
 
         <%= yield %>
+
+        <footer>
+            <div class="container">
+                <h3>ClosetApp</h3>
+                <p>Copyright © ◯◯◯,Inc. All Rights Reserved</p>
+            </div>
+        </footer>
 
     </body>
 </html>

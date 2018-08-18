@@ -9,4 +9,6 @@ class Cloth < ApplicationRecord
   # バリデーション
   validates :name, {presence: true}
   validates :image, {presence: true}
+
+
 end
