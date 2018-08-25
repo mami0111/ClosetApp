@@ -3,14 +3,17 @@
 <div class="cloth-show">
 
   <h3><%= @cloth.name %></h3>
-  <div class="cloth-image">
+  <div class="cloth-image-show">
     <img src ="<%= @cloth.image %>">
   </div>
   <p>カテゴリ：<%= @cloth.category.name %></p>
   <p>カラー：<%= @cloth.color.name %></p>
   <p>メモ：<%= @cloth.memo %></p>
 
+  <div class="cloth-edit-link">
+    <%= link_to '洋服データの編集', edit_cloth_path(@cloth) %> 
+  </div>
+
 </div>
 
-<%= link_to 'Edit', edit_cloth_path(@cloth) %> |
-<%= link_to 'Back', cloths_path %>
+

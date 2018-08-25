@@ -1,32 +1,42 @@
-<div class="user-date">
+<div class="login-wrapper">
+  <div class="container">
+      <div class="login">
 
-  <h2>ログイン</h2>
+        <h2>ログイン</h2>
+        
+        <p class="alert"><%= alert %></p>
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <i class="fas fa-envelope fa-fw"></i>
-      <%= f.label :メールアドレス %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
+        <div class="login-user">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <i class="fas fa-envelope fa-fw"></i>
+            <%= f.label :メールアドレス %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
 
-    <div class="field">
-      <i class="fas fa-lock fa-fw"></i>
-      <%= f.label :パスワード %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
+          <div class="field">
+            <i class="fas fa-lock fa-fw"></i>
+            <%= f.label :パスワード %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
 
-    <% if devise_mapping.rememberable? -%>
-      <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :次回から自動的にログイン %>
+          <% if devise_mapping.rememberable? -%>
+            <div class="field">
+              <div class="field-check">
+                <%= f.check_box :remember_me %>
+              </div>
+              <%= f.label :次回から自動的にログイン %>
+            </div>
+          <% end %>
+
+            <%= f.submit "ログイン", :class => "submit-btn"  %>
+        <% end %>
+
+      <%= render "devise/shared/links" %>
+      <div class="signup-link">
+        <%= link_to '初めてご利用の方（新規会員登録）', new_user_registration_path %>
       </div>
-    <% end -%>
 
-    <div class="actions">
-      <%= f.submit "ログイン" %>
     </div>
-  <% end %>
-
-<%= render "devise/shared/links" %>
-
+  </div>
 </div>

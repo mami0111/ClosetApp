@@ -1,47 +1,59 @@
-<div class="user-date">
+<div class="login-wrapper">
+  <div class="container">
+      <div class="login">
 
-  <h2>ユーザ設定</h2>
+        <h2>ユーザ設定</h2>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= devise_error_messages! %>
+        <div class="login-user">
 
-    <div class="field">
-      <%= f.label :メールアドレス %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%= devise_error_messages! %>
+
+            <div class="field">
+              <i class="fas fa-envelope fa-fw"></i>
+              <%= f.label :メールアドレス %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
+
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
+
+            <div class="field">
+               <i class="fas fa-lock fa-fw"></i>
+              <%= f.label :新パスワード %><br />
+              <%= f.password_field :password, autocomplete: "off", :placeholder => "パスワードを変更する場合は６文字以上の新パスワードを入力してください" %>  
+            </div>
+
+            <div class="field">
+               <i class="fas fa-lock fa-fw"></i>
+              <%= f.label :確認用パスワード %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off" ,:placeholder => "新パスワードを入力してください" %>
+            </div>
+
+            <div class="field">
+              <i class="fas fa-lock fa-fw"></i>
+              <%= f.label :現在のパスワード %><br />
+              <%= f.password_field :current_password, autocomplete: "off", :placeholder => "現在のパスワードを入力してください" %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "更新" %>
+            </div>
+          <% end %>
+        </div>
     </div>
+  </div>
+</div>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-    <% end %>
+<div clas="delete-wrapper">
+  <div class="container">
+    <div class="delete">
+      <h2>アカウント削除</h2>
 
-    <div class="field">
-      <%= f.label :新パスワード %> <i>(leave blank if you don't want to change it)</i><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-      <% if @minimum_password_length %>
-        <br />
-        <em><%= @minimum_password_length %> characters minimum</em>
-      <% end %>
+        <p>アカウントを削除すると、ClosetAppの利用ができなくなります。 
+          <%= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "アカウントを削除をしてよろしいでしょうか？" }, method: :delete %></p>
+
     </div>
-
-    <div class="field">
-      <%= f.label :確認用パスワード %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :現在のパスワード %> <i>(we need your current password to confirm your changes)</i><br />
-      <%= f.password_field :current_password, autocomplete: "off" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "更新" %>
-    </div>
-  <% end %>
-
-  <h3>アカウント削除</h3>
-
-  <p>Unhappy? <%= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete , class: "delete_button" %></p>
-
-  <%= link_to "Back", :back %>
-
+  </div>
 </div>

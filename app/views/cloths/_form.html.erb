@@ -1,4 +1,5 @@
-<div class="cloth-new">
+<div class="cloth-date"> 
+  <!-- class名直す -->
 
   <%= form_with(model: cloth, local: true) do |form| %>
     <% if cloth.errors.any? %>
@@ -40,6 +41,7 @@
 
     <div class="field">
         <%= form.label :image,"洋服画像" %><br>
+        
         <%= form.file_field :image %>
 
     </div>
@@ -47,6 +49,7 @@
     <div class="actions">
       <%= form.submit %>
     </div>
-  <% end %>
 
+  <% end %>
 </div>
+

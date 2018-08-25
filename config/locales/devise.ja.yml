@@ -60,3 +60,20 @@ ja:
       not_saved:
         one: "エラーが発生したため %{resource} は保存されませんでした:"
         other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした:"
+
+# 自分でエラーメッセージを追加
+  activerecord:
+    models:
+      user: 'ユーザ情報'
+    attributes:
+      user:
+        name: 'ユーザーネーム'
+        email: 'メールアドレス'
+        password:  'パスワード'
+    errors:
+      models:
+        user:
+          blank: 'が空白です。'
+#          attributes:
+#            name:
+#              blank: 'が空白です。'  # errosの中に同じ定義がある場合、ネストが深いほうが優先順位が高い

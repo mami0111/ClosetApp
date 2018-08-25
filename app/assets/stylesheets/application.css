@@ -14,8 +14,33 @@
  *= require_self
  */
 
+
+*{
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
 body{
   margin: 0;
+  font-family: sans-serif;
+  color: #646464;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: space-between;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 header{
@@ -61,3 +86,61 @@ li{
   color: white;
   text-decoration: none;
 }
+
+/* devise/shared/linksのCSS*/
+.new-password-path{
+  font-size: 15px;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.new-password-path a{
+  color: #66ccff;
+}
+
+
+.new-password-path:hover{
+  opacity: 1.0;
+}
+
+.login-link{
+  font-size: 15px;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.login-link a{
+  color: #66ccff;
+}
+
+.login-link:hover{
+  opacity: 1.0;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  margin-top: 80px;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+footer h3 {
+  padding-top: 15px; 
+  margin: 0;
+  font-size: 18px;
+}
+
+footer p {
+  padding-bottom: 20px;
+  margin: 0;
+  font-size: 12px;
+}
+
+/*.error-message{
+  width: 100%;
+  height: 50px;
+  background-color: ;
+  font-size: 15px;
+  text-align: center;
+}*/
