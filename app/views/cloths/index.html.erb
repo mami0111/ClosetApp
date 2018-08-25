@@ -1,20 +1,22 @@
-<div class="cloth-index">
+<div class="cloth-index-wrapper">
 
-    <h2><%= current_user.name %>のクローゼット</h2>
-    <% @cloths = Cloth.where(user_id: current_user.id) %>
-    <h3>アイテム数：<%= @cloths.count %></h3>
+    <%= render 'side_nav' %>
 
-    <% @cloths.each do |cloth| %>
-        <li>
-          <img src="<%= cloth.image %>">
-        <br>
-        <%= link_to "#{cloth.name}", "cloths/#{cloth.id}" %>
-        </li>
-      <% end %>
+    <div class="cloth-index">
+        <h2><%= current_user.name %>のクローゼット</h2>
+        <% @cloths = Cloth.where(user_id: current_user.id) %>
+        <h3>アイテム数：<%= @cloths.count %></h3>
+
+        <% @cloths.each do |cloth| %>
+            <li>
+              <img src="<%= cloth.image %>">
+            <br>
+            <%= link_to "#{cloth.name}", "cloths/#{cloth.id}" %>
+            </li>
+          <% end %>
+    </div>
+
 </div>
-
-<%= render 'side_nav' %>
-
 
 
 

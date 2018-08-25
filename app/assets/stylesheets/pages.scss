@@ -40,12 +40,11 @@
 
 .login{
   width: 490px;
-  height: 550px;
   margin: 0 auto;
   border: solid 1px #a6a6a6;
 }
 
-.login h2{
+.login > h2{
   background-color: #f5f5f5;
   margin: 0;
   padding: 5px 0;
@@ -69,6 +68,7 @@
   font-size: 15px;
   text-decoration: underline;
   opacity: 0.8;
+  margin-bottom: 20px;
 }
 
 .signup-link a{
@@ -153,4 +153,27 @@ i {
   opacity: 0.8;
   border-radius: 4px;
   border-color: #66ccff;
+}
+
+.alert {
+  background-color: #FFDBC9;
+  color: red;
+}
+
+//devise_error_message!にCSSを適用
+#error_explanation {
+  width: 100%;
+  background-color: #FFDBC9;
+  color: red;
+  padding: 10px 15px;
+}
+
+#error_explanation h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+#error_explanation li {
+  list-style: disc;
+  font-size: 15px;
 }

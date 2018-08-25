@@ -2,14 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-li{
+.cloth-index li{
   float: left;
 }
 
 // ログイン後のトップページ
-.cloth-index{
-  float: right;
-  width: 70%;
+.cloth-index-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
 }
 
 //side_nav
@@ -32,32 +34,54 @@ li{
   color: #646464;
 }
 
+
+.cloth-index{
+  width: 80%;
+  margin-left: 15px;
+}
+
+
 // 洋服詳細ページ
 .cloth-show{
   width: 600px;
   margin: 0 auto;
-
-  h3, p{
-    text-align: center;
-  }
-}
-
-.cloth-image{
   text-align: center;
 }
+
+.cloth-edit-link{
+  font-size: 15px;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.cloth-edit-link a{
+  color: #66ccff;
+}
+
+.cloth-edit-link:hover{
+  opacity: 1.0;
+}
+
 
 // 洋服データ登録ページ
 .cloth-new-wrapper{
+  padding-top: 50px;
   text-align: center;
   color: #646464;
-  padding-top: 50px;
+}
+
+.cloth-new-wrapper .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
 }
 
 .cloth-new{
-  width: 490px;
+  width: 400px;
   height: 650px;
-  margin: 0 auto;
   border: solid 1px #a6a6a6;
+  margin-right: 15px;
 }
 
 .cloth-new h2{
@@ -68,6 +92,26 @@ li{
 
 .cloth-date{
   padding-top: 30px;
+}
+
+
+.cloth-image {
+  width: 400px;
+  height: 650px;
+  border: solid 1px #a6a6a6; 
+  margin-left: 15px;
+}
+
+.cloth-image h2{
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 5px 0;
+}
+
+#crop_area_box {
+  width: 300px;
+  height: 400px;
+  margin : 50px auto;
 }
 
 
@@ -127,15 +171,6 @@ label{
   margin-bottom: 20px;
 }
 
-.cloth-new-logo{
-  width: 600px;
-  margin: 0 auto;  
-
-  h2{
-    text-align: center;
-  }
-
-}
 
 // 検索結果ページ
 .cloth-search{

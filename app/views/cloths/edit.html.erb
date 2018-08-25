@@ -1,6 +1,19 @@
-<h1>Editing Cloth</h1>
+<div class="cloth-new-wrapper">
+  <div class="container">
+    <div class="cloth-new">
+    
+      <h2>洋服データ編集</h2>
 
 <%= render 'form', cloth: @cloth %>
 
-<%= link_to 'Show', @cloth %> |
-<%= link_to 'Back', cloths_path %>
+    </div>
+    <div class="cloth-image">
+      <h2>洋服画像</h2>
+      <div id="crop_area_box"><img id="crop_image" src="<%= @cloth.image %>" />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%= link_to 'Show', @cloth %> 

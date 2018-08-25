@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function() { 
 
   var fileName;
 
@@ -34,7 +34,7 @@ $(function(){
   function initCrop() {
     cropper = new Cropper(crop_image, {
       dragMode: 'move', // 画像を動かす設定
-      aspectRatio: 1 / 1, // 正方形やで！
+      aspectRatio: 3 / 4, // 正方形やで！
       restore: false,
       guides: false,
       center: false,
@@ -43,7 +43,7 @@ $(function(){
       cropBoxResizable: false,
       toggleDragModeOnDblclick: false,
       minCropBoxWidth: 300,
-      minCropBoxHeight: 300,
+      minCropBoxHeight: 400,
       ready: function () {
         croppable = true;
       }
