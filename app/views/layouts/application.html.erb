@@ -29,13 +29,12 @@
   </head>
 
   <body>
-        <header>
-            <nav>
-                <div class="header-logo">
-                    <%= link_to "ClosetApp", "/" %>
-                </div>
-                <div class="header-list">
-                <ul>
+    <header>
+        <div class="header__logo">
+            <%= link_to "ClosetApp", "/" %>
+        </div>
+        <div class="header__list">
+            <ul>
                 <% if user_signed_in? %>
                     <li><%= link_to "洋服一覧", "/cloths" %>
                     <li><%= link_to "洋服データ登録","/cloths/new" %>
@@ -45,14 +44,13 @@
                     <li><%= link_to '新規登録', new_user_registration_path %>
                     <li><%= link_to 'ログイン', new_user_session_path %>
                 <% end %>
-                </ul>
-                </div>
-            </nav>
-        </header>
+            </ul>
+        </div>
+    </header>
        
         <div class="error-message">
             <div class="container">
-                <p class="notice"><%= notice %></p>
+                <!-- <p class="notice"><%= notice %></p> -->
                 <!-- <p class="alert"><%= alert %></p> -->
             </div>
         </div>

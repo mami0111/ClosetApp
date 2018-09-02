@@ -20,7 +20,7 @@ class ClothsTest < ApplicationSystemTestCase
     fill_in "Memo", with: @cloth.memo
     fill_in "Name", with: @cloth.name
     fill_in "User", with: @cloth.user
-    click_on "Create Cloth"
+    click_on "登録"
 
     assert_text "Cloth was successfully created"
     click_on "Back"
@@ -36,7 +36,7 @@ class ClothsTest < ApplicationSystemTestCase
     fill_in "Memo", with: @cloth.memo
     fill_in "Name", with: @cloth.name
     fill_in "User", with: @cloth.user
-    click_on "Update Cloth"
+    click_on "更新"
 
     assert_text "Cloth was successfully updated"
     click_on "Back"

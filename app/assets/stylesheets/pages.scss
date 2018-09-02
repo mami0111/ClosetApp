@@ -3,48 +3,46 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //TOPページ
-.top-wrapper{
+.main {
   text-align: center;
-  padding-top: 10px
 }
 
-.top-wrapper h1{
+.main__heading {
+  padding: 0;
+  margin: 0;
 }
 
-.top-wrapper img{
+.main__image {
   width: 500px;
 }
 
-.top-wrapper p{
-}
-
-.btn{
+.btn {
   padding: 8px 24px;
   color: white;
   background-color: #66ccff;
-  opacity: 0.8;
+  opacity: 0.8; 
   border-radius: 4px;
+  text-decoration: none;
 }
 
-.btn:hover{
+.btn:hover {
   opacity: 1;
 }
 
 
 //ログインページ、新規登録ページ
-.login-wrapper{
+.login-wrapper {
   text-align: center;
   color: #646464;
-  padding-top: 50px;
 }
 
-.login{
+.login {
   width: 490px;
   margin: 0 auto;
   border: solid 1px #a6a6a6;
 }
 
-.login > h2{
+.login__heading {
   background-color: #f5f5f5;
   margin: 0;
   padding: 5px 0;

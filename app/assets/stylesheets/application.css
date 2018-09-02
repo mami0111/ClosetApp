@@ -14,77 +14,58 @@
  *= require_self
  */
 
-
-*{
-  box-sizing: border-box;
-}
-
-html {
-  height: 100%;
-}
-
-body{
-  margin: 0;
-  font-family: sans-serif;
-  color: #646464;
+body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   justify-content: space-between;
+  min-height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #646464;
 }
 
-
-a{
-  text-decoration: none;
-}
-
-.container{
+.container {
   padding: 0 15px;
   margin: 0 auto;
 }
 
-header{
+/* header */
+header {
   width: 100%;
   height: 70px;
+  margin-bottom: 50px;
   background-color: #66ccff;
   }
 
-ul{
-  margin: 0;
+header a {
+  color: white;
+  text-decoration: none;
 }
 
-li{
-  list-style: none;
-  }
-
-.header-logo{
+.header__logo {
   float: left;
+  line-height: 70px;
+  padding-left: 30px;
   font-size: 25px;
-  line-height: 70px;
-  padding-left:30px;
 }
 
-.header-logo a{
-  color: white;
-  text-decoration: none;
-}
-
-
-.header-list{
+.header__list {
   float: right;
-}
-
-.header-list li{
-  list-style: none;
-  float: left;
-  font-size: 15px;
   line-height: 70px;
-  padding-right:30px;
 }
 
-.header-list a{
-  color: white;
-  text-decoration: none;
+.header__list ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header__list li {
+  float: left;
+  padding-right: 30px;
+  font-size: 15px;
+  list-style: none;
 }
 
 /* devise/shared/linksのCSS*/
@@ -117,6 +98,7 @@ li{
   opacity: 1.0;
 }
 
+/* footer */
 footer {
   width: 100%;
   height: 80px;
