@@ -2,6 +2,15 @@ $(document).on('turbolinks:load', function() {
 
   var fileName;
 
+  function initalCrop() {
+    var $crop_area_box = $('#crop_area_box');
+        $crop_area_box.empty();
+        $crop_area_box.append($('<img>').attr({
+          src: "main-image.jpg",
+          id: "crop_image",
+        }));
+  }
+
   // 画像ファイル選択後のプレビュー処理
   $('form').on('change', 'input[type="file"]', function(event) {
     var file = event.target.files[0];
@@ -46,6 +55,18 @@ $(document).on('turbolinks:load', function() {
       minCropBoxHeight: 400,
       ready: function () {
         croppable = true;
+      },
+      crop: function (e) {
+        var data = e.detail;
+        console.log(e.type);
+        console.log("X座標:" , Math.round(data.x));
+        console.log("Y座標:" , Math.round(data.y));
+        console.log("高さ:" , Math.round(data.height));
+        console.log("幅:" , Math.round(data.width));
+        $('#cloth_upload_image_x').val(Math.round(data.x));
+        $('#cloth_upload_image_y').val(Math.round(data.y));
+        $('#cloth_upload_image_h').val(Math.round(data.height));
+        $('#cloth_upload_image_w').val(Math.round(data.width));
       }
     });
     // 初回表示時
@@ -55,6 +76,7 @@ $(document).on('turbolinks:load', function() {
     // 画像をドラッグした際の処理
     crop_image.addEventListener('cropend', function(e){
       cropping(e);
+      cropper.clop;
     });
     // 画像を拡大・縮小した際の処理
     crop_image.addEventListener('zoom', function(e){
@@ -71,37 +93,11 @@ $(document).on('turbolinks:load', function() {
     });
     // `$('<img>'{src: croppedCanvas.toDataURL()});` 的に書きたかったけど、jQuery力が足りず・・・
     var croppedImage = document.createElement('img');
+    crop_preview = $('#crop_image');
     croppedImage.src = croppedCanvas.toDataURL();
-    crop_preview.innerHTML = '';
-    crop_preview.appendChild(croppedImage);
+    // crop_preview.innerHTML = '';
+    // crop_preview.appendChild(croppedImage);
   }
 
-  // Submit時に実行するPOST処理
-  $('#submitBtn').on('click', function(event){
-    // クロップ後のファイルをblobに変換し、AjaxでForm送信
-    croppedCanvas.toBlob(function (blob) {
-      const fileOfBlob = new File([blob], fileName);
-      var formData = new FormData();
-      // `employee[avatar]` は `employee` modelに定義した `mount_uploader :avatar, AvatarUploader` のコト
-      formData.append('employee[avatar]', fileOfBlob);
-      // EmployeeのID取得
-      const employee_id = $('#employee_id').val();
-      $.ajax('/avatar/' + employee_id + '/update', {
-        method: "PATCH", // POSTの方が良いのかな？
-        data: formData,
-        processData: false, // 余計な事はせず、そのままSUBMITする設定？
-        contentType: false,
-        success: function (res) {
-          // DOM操作にしたほうがいいのかな？その場合、アップロード後に実行するなどのポーリング処理的なサムシングが必要になりそう・・・
-          // なので、とりあえず簡単に`location.reload`しちゃう
-          location.reload();
-        },
-        error: function (res) {
-          console.error('Upload error');
-        }
-      });
-    // S3にアップロードするため画質を50%落とす
-    }, 'image/jpeg', 0.5);
-  });
 
 });

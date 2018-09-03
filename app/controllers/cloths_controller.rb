@@ -25,7 +25,23 @@ class ClothsController < ApplicationController
   # POST /cloths
   # POST /cloths.json
   def create
-    @cloth = Cloth.new(cloth_params)
+
+
+    @cloth = Cloth.new(
+      :user_id => params[:cloth][:user_id],
+      :name => params[:cloth][:name],
+      :category_id => params[:cloth][:category_id],
+      :color_id => params[:cloth][:color_id],
+      :memo => params[:cloth][:memo],
+      :image => params[:cloth][:image]
+    )
+
+    img = Magick::ImageList.new(params[:cloth][:image])
+
+    puts (params[:cloth][:upload_image_x])
+    puts (params[:cloth][:upload_image_y])
+    puts (params[:cloth][:upload_image_h])
+    puts (params[:cloth][:upload_image_w])
 
     respond_to do |format|
       if @cloth.save
@@ -75,7 +91,7 @@ class ClothsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     # Strong Parameters。URLから直接入力すればデータが登録できてしまうので、それを阻止するもの。
     def cloth_params
-      params.require(:cloth).permit(:user_id, :name, :category_id, :color_id, :memo, :image)
+      params.require(:cloth).permit(:user_id, :name, :category_id, :color_id, :memo, :image, :upload_image_x, :upload_image_y, :upload_image_h, :upload_image_w)
     end
     
 
