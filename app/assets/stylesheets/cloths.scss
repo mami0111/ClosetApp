@@ -2,11 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.cloth-index li{
-  float: left;
-}
-
-// ログイン後のトップページ
 .cloth-index-wrapper {
   width: 100%;
   display: flex;
@@ -15,31 +10,50 @@
 }
 
 //side_nav
-.side-nav{
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 15px;
+.side-nav {
+  padding: 0 15px;
   width: 20%;
+  font-size: 15px;
 }
 
-.side-nav p{
+.side-nav p {
   border-bottom: solid 1px #dadada;
 }
 
-.side-nav p:hover{
+.side-nav p:hover {
   background-color: #dadada;
 }
 
-.side-nav a{
+.side-nav a {
   color: #646464;
+  text-decoration: none;
 }
 
-
-.cloth-index{
+// ログイン後のトップページ
+.cloth-index {
   width: 80%;
-  margin-left: 15px;
 }
 
+.cloth-index li { 
+  float: left;
+  list-style: none;
+}
+
+.cloth-index a {
+  text-decoration: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.cloth__card {
+  text-align: center;
+  margin: 0 10px 10px 0;
+}
 
 // 洋服詳細ページ
 .cloth-show{
@@ -115,61 +129,6 @@
 }
 
 
-i{
-  float: left;
-}
-
-
-form{
-  width: 250px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-
-input {
-    width: 100%;
-    padding: 5px;
-    font-size: 15px;
-    box-sizing: border-box;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(166,166,166);
-    border-radius: 4px;
-}
-
-input[type="submit"]{
-  width: 130px;
-  height: 30px;
-  margin: 50px 0 50px 0; 
-  color: white;
-  background-color: #66ccff;
-  opacity: 0.8;
-  border-radius: 4px;
-  border-color: #66ccff;
-}
-
-input[type="submit"]:hover{
-  opacity: 1.0;
-  cursor: pointer;
-}
-
-
-select{
-    width: 100%;
-    padding: 5px;
-    font-size: 15px;
-    height: 32px;
-    background-color: white;
-}
-
-label{
-  float: left;
-}
-
-.field{
-  margin-bottom: 20px;
-}
 
 
 // 検索結果ページ
