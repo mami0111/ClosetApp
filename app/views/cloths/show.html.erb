@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
 <div class="cloth-show">
 
@@ -10,9 +10,12 @@
   <p>カラー：<%= @cloth.color.name %></p>
   <p>メモ：<%= @cloth.memo %></p>
 
-  <div class="cloth-edit-link">
-    <%= link_to '洋服データの編集', edit_cloth_path(@cloth) %> 
+  <div class="link mb50">
+    <%= link_to '洋服データの編集', edit_cloth_path(@cloth) %><br>
+    <%= link_to '洋服データの削除', cloth_path(@cloth), method: :delete, data: {confirm: "本当に削除しますか？"} %><br><br>
+    <%= link_to '洋服一覧ページに戻る', :back %> 
   </div>
+
 
 </div>
 

@@ -1,0 +1,38 @@
+/* TOPページ */
+.main {
+  text-align: center;
+}
+
+.main__heading {
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.main__image {
+  width: 500px;
+  margin: 0 0 20px 0;
+}
+
+.main__description {
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.main__btn {
+  margin-bottom: 60px;
+
+  .btn {
+    padding: 8px 24px;
+    background-color: #66ccff;
+    border-radius: 4px;
+    opacity: 0.8; 
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+    opacity: 1;
+    }
+
+  }
+
+}

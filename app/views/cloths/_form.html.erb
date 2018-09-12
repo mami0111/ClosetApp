@@ -1,5 +1,4 @@
-<div class="cloth-date"> 
-  <!-- class名直す -->
+<div class="cloth-data__info"> 
 
   <%= form_with(model: cloth, local: true) do |form| %>
     <% if cloth.errors.any? %>
@@ -16,12 +15,7 @@
 
     <div class="field">
       <%= form.hidden_field :user_id, :value => current_user.id %> 
-      <%= form.hidden_field :upload_image_x, :value => "10" %> 
-      <%= form.hidden_field :upload_image_y, :value => "20" %> 
-      <%= form.hidden_field :upload_image_h, :value => "30" %> 
-      <%= form.hidden_field :upload_image_w, :value => "40" %> 
     </div>
-     
 
     <div class="field">
       <%= form.label :洋服名 %><br>

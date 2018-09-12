@@ -1,0 +1,21 @@
+//side_nav
+.side-nav {
+  padding: 0 15px;
+  width: 20%;
+  font-size: 15px;
+
+  p {
+    border-bottom: solid 1px #dadada;
+
+    &:hover {
+      background-color: #dadada;
+    }
+  
+  }
+
+  a {
+  color: #646464;
+  text-decoration: none;
+  }
+
+}

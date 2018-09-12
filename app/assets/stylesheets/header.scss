@@ -1,0 +1,36 @@
+/* header */
+header {
+  height: 70px;
+  width: 100%;
+  margin-bottom: 50px;
+  background-color: #66ccff;
+
+  a {
+  color: white;
+  text-decoration: none;
+  }
+
+}
+.header__logo {
+  float: left;
+  margin-left: 30px;
+  font-size: 25px;
+  line-height: 70px;
+}
+
+.header__list {
+  float: right;
+
+　ul {
+  margin: 0;
+  padding: 0;
+  }
+
+  li {
+  float: left;
+  padding-right: 30px;
+  font-size: 15px;
+  list-style: none;
+  }
+
+}

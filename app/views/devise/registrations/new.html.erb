@@ -1,12 +1,12 @@
-<div class="login-wrapper">
+<div class="devise-wrapper">
   <div class="container">
 
     <%= devise_error_messages! %> 
     
-    <div class="login">
-      <h2 class="login__heading">新規登録</h2>
+    <div class="devise">
+      <h2 class="devise__heading">新規登録</h2>
 
-      <div class="login-user">
+      <div class="devise__info">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
          
 
@@ -20,7 +20,7 @@
           <div class="field">
             <i class="fas fa-envelope fa-fw"></i>
             <%= f.label :メールアドレス %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "sample@ne.co.jp"%>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "sample@co.jp" %>
           </div>
 
           <div class="field">
@@ -36,7 +36,7 @@
           </div>
 
           <div class="actions">
-            <%= f.submit "新規登録", :class => "submit-btn signup" %>
+            <%= f.submit "新規登録" %>
           </div>
         <% end %>
 
