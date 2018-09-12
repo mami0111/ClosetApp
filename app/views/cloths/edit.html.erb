@@ -1,20 +1,18 @@
-<div class="cloth-new-wrapper">
+<div class="cloth-data-wrapper">
   <div class="container">
-    <div class="cloth-new">
+    <div class="cloth-data">
     
-      <h2>洋服データ編集</h2>
+      <h2 class="cloth-data__heading">洋服データ編集</h2>
+      <%= render 'form', cloth: @cloth %>
 
-<%= render 'form', cloth: @cloth %>
-
-    </div>
-    <div class="cloth-image">
-      <h2>洋服画像</h2>
-      <div id="crop_area_box"><img id="crop_image" src="<%= @cloth.image %>" />
+      <div class="link mb50">
+        <%= link_to '洋服詳細ページに戻る', :back %> 
       </div>
-      <div id="crop_preview"></div>
+
+
     </div>
 
   </div>
 </div>
 
-<%= link_to 'Show', @cloth %> 
+

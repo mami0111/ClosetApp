@@ -14,77 +14,7 @@
  *= require_self
  */
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  color: #646464;
-  font-family: sans-serif;
-}
 
-.container {
-  padding: 0 15px;
-  margin: 0 auto;
-}
 
-/* header */
-header {
-  height: 70px;
-  width: 100%;
-  margin-bottom: 50px;
-  background-color: #66ccff;
-  }
 
-header a {
-  color: white;
-  text-decoration: none;
-}
 
-.header__logo {
-  float: left;
-  padding-left: 30px;
-  font-size: 25px;
-  line-height: 70px;
-}
-
-.header__list {
-  float: right;
-  line-height: 70px;
-}
-
-.header__list ul {
-  margin: 0;
-  padding: 0;
-}
-
-.header__list li {
-  float: left;
-  padding-right: 30px;
-  font-size: 15px;
-  list-style: none;
-}
-
-/* footer */
-footer {
-  height: 80px;
-  width: 100%;
-  margin-top: 80px;
-  background-color: #f6f6f6;
-  text-align: center;
-}
-
-footer h3 {
-  padding-top: 15px; 
-  margin: 0;
-  font-size: 18px;
-}
-
-footer p {
-  padding-bottom: 20px;
-  margin: 0;
-  font-size: 12px;
-}

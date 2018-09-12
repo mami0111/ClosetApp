@@ -1,0 +1,32 @@
+.cloth-index-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.cloth-index {
+  width: 80%;
+
+  li { 
+    float: left;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.cloth__card {
+  text-align: center;
+  margin: 0 10px 10px 0;
+}

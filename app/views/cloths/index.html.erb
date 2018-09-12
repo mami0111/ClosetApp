@@ -1,27 +1,22 @@
 <div class="cloth-index-wrapper">
 
-    <%= render 'side_nav' %>
+  <%= render 'side_nav' %>
 
-    <div class="cloth-index">
-        <h2><%= current_user.name %>のクローゼット</h2>
-        <% @cloths = Cloth.where(user_id: current_user.id) %>
-        <h3>アイテム数：<%= @cloths.count %></h3>
-        <div class="card">
-            <% @cloths.each do |cloth| %>
-                <div class="cloth__card">
-                    <li>
-                        <img class="card__img" src="<%= cloth.image %>">
-                        <br>
-                        <%= link_to "#{cloth.name}", "cloths/#{cloth.id}", :class => "card__name" %>
-                    </li>
-                </div>
-            <% end %>
+  <div class="cloth-index">
+    <h2><%= current_user.name %>のクローゼット</h2>
+    <% @cloths = Cloth.where(user_id: current_user.id) %>
+    <h3>アイテム数：<%= @cloths.count %></h3>
+
+    <div class="card">
+      <% @cloths.each do |cloth| %>
+        <div class="cloth__card">
+          <li>
+            <img class="card__img" src="<%= cloth.image %>"><br>
+              <%= link_to "#{cloth.name}", "cloths/#{cloth.id}", :class => "card__name" %>
+          </li>
         </div>
+      <% end %>
     </div>
+  </div>
 
 </div>
-
-
-
-
-

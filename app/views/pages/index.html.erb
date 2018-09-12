@@ -1,10 +1,18 @@
 <div class= "main">
   <div class= "container">
+    
     <h1 class= "main__heading">ClosetAppにようこそ！</h1>
+    
     <img class= "main__image" src= "main-image.jpg">
-    <p>このアプリは、WEB上で自分のクローゼットを作成するアプリです</p>
-    <p>持っている洋服を把握し、おしゃれを楽しみましょう！</p>
-    <%= link_to '新規登録はこちら', new_user_registration_path, {:class => "btn"} %>
+    
+    <p class="main__description">
+      このアプリは、WEB上で自分のクローゼットを作成するアプリです<br>
+      持っている洋服を把握し、おしゃれを楽しみましょう！
+    </p>
+    
+    <div class="main__btn">
+      <%= link_to '新規登録はこちら', new_user_registration_path, {:class => "btn"} %>
+    </div>
   </div>
 </div>
 
