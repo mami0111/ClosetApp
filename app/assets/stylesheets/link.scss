@@ -1,0 +1,19 @@
+/* devise/shared/links、linkのCSS*/
+.link {
+  font-size: 15px;
+  text-decoration: underline;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1.0;
+  }
+
+  a {
+    color: #66ccff;
+  }
+
+}
+
+.mb50 {
+  margin-bottom: 50px;
+}

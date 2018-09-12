@@ -1,15 +1,21 @@
-<div class="cloth-search">
+<div class="cloth-index-wrapper">
 
+  <%= render 'side_nav' %>
 
-  <% @cloths.each do |cloth| %>
-
-    <%= cloth.name %>
-
-    <img src="<%= cloth.image %> ">
-
-    <br>
-  <% end %>
+  <div class="cloth-index">
+    <div class="card">
+      <% @cloths.each do |cloth| %>
+        <div class="cloth__card">
+          <li>
+            <img class="card__img" src="<%= cloth.image %>">
+            <br>
+            <%= link_to "#{cloth.name}", "cloths/#{cloth.id}", :class => "card__name" %>
+          </li>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
 </div>
 
-<%= render 'side_nav' %>
+
