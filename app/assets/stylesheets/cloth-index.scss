@@ -8,6 +8,14 @@
 .cloth-index {
   width: 80%;
 
+  h2 {
+    margin: 0px 0px 10px 0px;
+  }
+
+  h3 {
+    margin: 0px 0px 10px 0px;
+  }
+
   li { 
     float: left;
     list-style: none;
@@ -28,5 +36,14 @@
 
 .cloth__card {
   text-align: center;
-  margin: 0 10px 10px 0;
+  margin: 0 20px 15px 0;
+
+  .card__img {
+    width: 140px;
+  }
+
+  .card__name {
+    font-size: 15px;
+  }
+
 }

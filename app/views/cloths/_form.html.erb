@@ -40,6 +40,7 @@
     <div class="field">
         <%= form.label :image,"洋服画像" %><br>        
         <%= form.file_field :image %>
+        <img src="<%= @cloth.image %>" class="uploaded thumb" alt="" /><br />
     </div>
 
     <div class="actions">

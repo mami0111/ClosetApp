@@ -12,7 +12,7 @@
         <div class="cloth__card">
           <li>
             <img class="card__img" src="<%= cloth.image %>"><br>
-              <%= link_to "#{cloth.name}", "cloths/#{cloth.id}", :class => "card__name" %>
+              <%= link_to "#{cloth.name}", "/cloths/#{cloth.id}", :class => "card__name" %>
           </li>
         </div>
       <% end %>
