@@ -4,6 +4,7 @@
 
   <div class="cloth-index">
     <h2><%= current_user.name %>のクローゼット</h2>
+    <% @cloths = Cloth.where(user_id: current_user.id) %>
     <h3>アイテム数：<%= @cloths.count %></h3>　　
 
     <div class="card">
