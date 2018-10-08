@@ -63,7 +63,7 @@ class ClothsController < ApplicationController
   end
   # 検索機能を実装
   def search
-    @cloths=Cloth.where(category_id: params[:id])
+    @cloths=Cloth.where(category_id: params[:id]).where(user_id: current_user.id);
   end
 
   private
