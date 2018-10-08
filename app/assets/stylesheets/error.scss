@@ -1,0 +1,33 @@
+/* devise_error_message!にCSSを適用 */
+#error_explanation {
+  width: 450px;
+  padding: 10px;
+  margin: 0 auto 30px;
+  background-color: #FFDBC9;
+  color: red;
+
+  h2 {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  ul {
+    padding: 0;
+  
+    li {
+      list-style: none;
+      font-size: 15px;
+    }
+  }
+
+}
+
+
+/* alertにcssを適用 */
+.alert {
+  width: 450px;
+  margin: 0 auto 30px;
+  background-color: #FFDBC9;
+  font-size: 15px;
+  color: red;
+}

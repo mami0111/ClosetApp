@@ -22,22 +22,22 @@
     </div>
 
     <div class="field">
-      <%= form.label :カテゴリ %><br>
+      <%= form.label :category_id %><br>
       <%= form.collection_select :category_id, Category.all, :id, :name %>
     </div>
 
     <div class="field">
-      <%= form.label :カラー %><br>
+      <%= form.label :color_id %><br>
       <%= form.collection_select :color_id, Color.all, :id, :name %>
     </div>
 
     <div class="field">
-      <%= form.label :メモ %><br>
+      <%= form.label :memo %><br>
       <%= form.text_field :memo %>
     </div>
 
     <div class="field">
-        <%= form.label :image,"洋服画像" %><br>        
+        <%= form.label :image %><br>        
         <%= form.file_field :image %>
         <img src="<%= @cloth.image %>" class="uploaded thumb" alt="" /><br />
     </div>

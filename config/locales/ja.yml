@@ -1,9 +1,11 @@
 ja:
   activerecord:
+    models:
+      cloth: '洋服'
     attributes:
-        cloth: 
+      cloth: 
         name: '名前'
-        category_id:
-        color_id:
-        memo:
-        image: '洋服画像'
+        category_id: 'カテゴリ'
+        color_id: 'カラー'
+        memo: 'メモ'
+        image: '洋服画像' 

@@ -1,12 +1,12 @@
 <div class="devise-wrapper">
   <div class="container">
 
-    <p class="alert"><%= alert %></p>
-
       <div class="devise">
 
         <h2 class="devise__heading">ログイン</h2>
       
+        <p class="alert"><%= alert %></p>
+
         <div class="devise__info">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 

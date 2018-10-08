@@ -91,30 +91,5 @@
 
 }
 
-/* devise_error_message!にCSSを適用 */
-#error_explanation {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 30px;
-  background-color: #FFDBC9;
-  color: red;
 
-  h2 {
-    margin: 0;
-    font-size: 20px;
-  }
-
-  li {
-    list-style: none;
-    font-size: 15px;
-  }
-
-}
-
-
-/* alertにcssを適用 */
-.alert {
-  background-color: #FFDBC9;
-  color: red;
-}
 
