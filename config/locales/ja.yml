@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    attributes:
+        cloth: 
+        name: '名前'
+        category_id:
+        color_id:
+        memo:
+        image: '洋服画像'

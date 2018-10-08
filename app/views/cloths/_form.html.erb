@@ -3,8 +3,7 @@
   <%= form_with(model: cloth, local: true) do |form| %>
     <% if cloth.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(cloth.errors.count, "error") %> prohibited this cloth from being saved:</h2>
-
+        <h2>入力した内容にエラーが<%= cloth.errors.count %>件あります</h2>
         <ul>
         <% cloth.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -18,7 +17,7 @@
     </div>
 
     <div class="field">
-      <%= form.label :洋服名 %><br>
+      <%= form.label :name %><br>
       <%= form.text_field :name %>
     </div>
 
@@ -44,7 +43,7 @@
     </div>
 
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit :value => "登録"%>
     </div>
 
   <% end %>
