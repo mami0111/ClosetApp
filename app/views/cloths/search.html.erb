@@ -1,6 +1,11 @@
 <div class="cloth-index-wrapper">
 
-  <%= render 'side_nav' %>
+  <div class ="side-nav">
+    <%= render 'side_nav' %>
+    <%= render 'side_nav_color' %>
+  </div>
+
+ <%= form.hidden_field :category_id, :value => params[:id] %>
 
   <div class="cloth-index">
     <h2><%= current_user.name %>のクローゼット</h2>

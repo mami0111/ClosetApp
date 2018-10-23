@@ -1,13 +1,12 @@
-<div class="side-nav">
+<div class="side-nav-category">
 
-<h3>カテゴリ</h3>
-<% @categories=Category.all %>
-<% @categories.each do |category| %>
-  <p>
-    <%= link_to "#{category.name}", "/cloths/category/#{category.id}" %>
-  </p>
- <% end %>
-
- 
+  <h3>カテゴリ</h3>
+  <% @categories=Category.all %>
+  <% @categories.each do |category| %>
+    <p>
+      <%= link_to "#{category.name}", "/cloths/category/#{category.id}" %>
+    </p>
+   <% end %>
 
 </div>
+

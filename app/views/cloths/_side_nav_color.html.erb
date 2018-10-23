@@ -1,0 +1,11 @@
+<div class="side-nav-color">
+
+  <h3>カラー</h3>
+  <% @colors=Color.all %>
+  <% @colors.each do |color| %>
+    <ul>
+      <li><%= color.name %></li>
+    </ul>
+   <% end %>
+
+</div>

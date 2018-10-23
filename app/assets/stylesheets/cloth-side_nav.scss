@@ -4,18 +4,48 @@
   width: 20%;
   font-size: 15px;
 
-  p {
-    border-bottom: solid 1px #dadada;
+  .side-nav-category {
 
-    &:hover {
-      background-color: #dadada;
+    p {
+      border-bottom: solid 1px #dadada;
+
+      &:hover {
+        background-color: #dadada;
+      }
+    
     }
-  
+
+    a {
+    color: #646464;
+    text-decoration: none;
+    }
+
   }
 
-  a {
-  color: #646464;
-  text-decoration: none;
+  .side-nav-color {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    h3 {
+      width: 100%;
+    }
+
+
+    ul {
+      margin: 5px 0;
+      padding: 0;
+      width: 50%;
+      list-style: none;
+      
+      li {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+
+      }
+    }
   }
 
 }
