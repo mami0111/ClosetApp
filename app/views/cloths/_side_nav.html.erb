@@ -1,12 +1,15 @@
 <div class="side-nav-category">
 
   <h3>カテゴリ</h3>
-  <% @categories=Category.all %>
-  <% @categories.each do |category| %>
-    <p>
-      <%= link_to "#{category.name}", "/cloths/category/#{category.id}" %>
-    </p>
-   <% end %>
 
+  <% form_with url: cloths_search_path do |form| %>
+    <% form.hidden_field :category_id, :value => "test" %>
+    <% @categories.each do |category| %>
+      <p>
+        <%= button_to "#{category.name}", {:action => "search", :id => category.id}, :method => "get" %>
+      </p>
+     <% end %>
+<% end %>
 </div>
 
+ 

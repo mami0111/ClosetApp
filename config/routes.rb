@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
 
 
-  get 'cloths/category/:id' => 'cloths#search'
+  get 'cloths/search' => 'cloths#search'
   
   
 end

@@ -4,7 +4,7 @@ class ClothsController < ApplicationController
   # GET /cloths
   # GET /cloths.json
   def index
-    @cloths = Cloth.all
+    @cloths = Cloth.where(user_id: current_user.id)
     @categories = Category.all
   end
 
@@ -61,9 +61,14 @@ class ClothsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
   # 検索機能を実装
   def search
+
     @cloths=Cloth.where(category_id: params[:id]).where(user_id: current_user.id);
+    @categories = Category.all
+    puts "aaaaa"
+    render 'index' 
   end
 
 
